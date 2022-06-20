@@ -19,14 +19,16 @@ body {
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 8px;
     width: var(--breakpoint-desktop);
+    margin: 16px;
 }
 
+
+.navbar-header{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
 
 
 
@@ -87,21 +89,21 @@ body {
     color: #364577 !important;
     border-color: #364577 !important;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
-    font-size: 60px !important;
+    font-size: 5em !important;
     margin: 8px;
 }
 
 .text-services {
     padding: 8px;
-    font-size: 16px;
+    font-size: 1.2em;
     text-align: center;
-    height: 150px;
+    height: auto;
 }
 
 .quote-reference {
     width: 55%;
     height: auto;
-    margin-top: 16px;
+    margin-top: 1.3em;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -210,6 +212,60 @@ body {
     text-align: center;
     font-size: 24px;
 }
+
+
+
+/* footer */
+.footer-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 32px;
+}
+
+.agency-adresse{
+    font-size: 16px;
+    color: var(--bg-nav)
+}
+
+.social-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: 80px;
+    margin-bottom: 16px;
+}
+
+.footer-list{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 24px;
+}
+
+.list-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    margin: 8px;
+}
+
+.title-footer{
+    font-size: 18px;
+    color: var(--bg-nav) !important;
+    align-self: flex-start;
+}
+
+.f-link, 
+li a {
+    color: var(--bg-nav) !important;
+    font-size: 16px;
+}
+
+
 
 a,
 button {
@@ -334,6 +390,7 @@ a:hover {
 .d-bloc p a {
     color: rgba(255, 255, 255, .6);
 }
+
 
 /* .d-bloc .a-btn:hover,
 .d-bloc .navbar a:hover,
@@ -502,7 +559,7 @@ a:hover {
 
 .navbar-brand img {
     min-width: 100px;
-    height: 40px;
+    height: 8vh;
     padding: 0;
 }
 
@@ -675,6 +732,10 @@ button {
 
 .icon-md {
     font-size: 30px !important;
+}
+
+.icon-md:hover{
+    color: rgba(255, 255, 255, 1) !important;
 }
 
 /* .icon-lg {
@@ -919,10 +980,10 @@ p {
     font-weight: 700;
 }
 
-.social {
+/* .social {
     max-width: 400px;
     margin: auto auto auto auto;
-}
+} */
 
 h2 {
     font-size: 22px;
@@ -942,6 +1003,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     height: auto;
+    margin: 16px;
 }
 
 h1 {
@@ -1001,9 +1063,10 @@ h4 {
     background-color: #364577;
 } */
 
-/* .bgc-atomic-tangerine {
+.bgc-atomic-tangerine {
     background-color: #F3976C;
-} */
+    width: 100%;
+}
 
 /* .tc-white {
     color: #F3976C!important;
