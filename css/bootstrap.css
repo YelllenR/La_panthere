@@ -4224,11 +4224,11 @@ input[type=submit].btn-block {
 }
 
 tr.collapse.in {
-    display: table-row
+    display: table-row;
 }
 
 tbody.collapse.in {
-    display: table-row-group
+    display: table-row-group;
 }
 
 .collapsing {
@@ -7688,7 +7688,7 @@ button.close {
 .pager:after,
 .panel-body:after,
 .row:after {
-    clear: both
+    clear: both;
 }
 
 
@@ -7751,191 +7751,191 @@ button.close {
 .visible-xs-block,
 .visible-xs-inline,
 .visible-xs-inline-block {
-    display: none !important
+    display: none !important;
 }
 
 @media (max-width:767px) {
     .visible-xs {
-        display: block !important
+        display: block !important;
     }
     table.visible-xs {
-        display: table !important
+        display: table !important;
     }
     tr.visible-xs {
-        display: table-row !important
+        display: table-row !important;
     }
     td.visible-xs,
     th.visible-xs {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (max-width:767px) {
     .visible-xs-block {
-        display: block !important
+        display: block !important;
     }
 }
 
 @media (max-width:767px) {
     .visible-xs-inline {
-        display: inline !important
+        display: inline !important;
     }
 }
 
 @media (max-width:767px) {
     .visible-xs-inline-block {
-        display: inline-block !important
+        display: inline-block !important;
     }
 }
 
 @media (min-width:768px) and (max-width:991px) {
     .visible-sm {
-        display: block !important
+        display: block !important;
     }
     table.visible-sm {
-        display: table !important
+        display: table !important;
     }
     tr.visible-sm {
-        display: table-row !important
+        display: table-row !important;
     }
     td.visible-sm,
     th.visible-sm {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:768px) and (max-width:991px) {
     .visible-sm-block {
-        display: block !important
+        display: block !important;
     }
 }
 
 @media (min-width:768px) and (max-width:991px) {
     .visible-sm-inline {
-        display: inline !important
+        display: inline !important;
     }
 }
 
 @media (min-width:768px) and (max-width:991px) {
     .visible-sm-inline-block {
-        display: inline-block !important
+        display: inline-block !important;
     }
 }
 
 @media (min-width:992px) and (max-width:1199px) {
     .visible-md {
-        display: block !important
+        display: block !important;
     }
     table.visible-md {
-        display: table !important
+        display: table !important;
     }
     tr.visible-md {
-        display: table-row !important
+        display: table-row !important;
     }
     td.visible-md,
     th.visible-md {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:992px) and (max-width:1199px) {
     .visible-md-block {
-        display: block !important
+        display: block !important;
     }
 }
 
 @media (min-width:992px) and (max-width:1199px) {
     .visible-md-inline {
-        display: inline !important
+        display: inline !important;
     }
 }
 
 @media (min-width:992px) and (max-width:1199px) {
     .visible-md-inline-block {
-        display: inline-block !important
+        display: inline-block !important;
     }
 }
 
 @media (min-width:1200px) {
     .visible-lg {
-        display: block !important
+        display: block !important;
     }
     table.visible-lg {
-        display: table !important
+        display: table !important;
     }
     tr.visible-lg {
-        display: table-row !important
+        display: table-row !important;
     }
     td.visible-lg,
     th.visible-lg {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 @media (min-width:1200px) {
     .visible-lg-block {
-        display: block !important
+        display: block !important;
     }
 }
 
 @media (min-width:1200px) {
     .visible-lg-inline {
-        display: inline !important
+        display: inline !important;
     }
 }
 
 @media (min-width:1200px) {
     .visible-lg-inline-block {
-        display: inline-block !important
+        display: inline-block !important;
     }
 }
 
 @media (max-width:767px) {
     .hidden-xs {
-        display: none !important
+        display: none !important;
     }
 }
 
 @media (min-width:768px) and (max-width:991px) {
     .hidden-sm {
-        display: none !important
+        display: none !important;
     }
 }
 
 @media (min-width:992px) and (max-width:1199px) {
     .hidden-md {
-        display: none !important
+        display: none !important;
     }
 }
 
 @media (min-width:1200px) {
     .hidden-lg {
-        display: none !important
+        display: none !important;
     }
 }
 
 .visible-print {
-    display: none !important
+    display: none !important;
 }
 
 @media print {
     .visible-print {
-        display: block !important
+        display: block !important;
     }
     table.visible-print {
-        display: table !important
+        display: table !important;
     }
     tr.visible-print {
-        display: table-row !important
+        display: table-row !important;
     }
     td.visible-print,
     th.visible-print {
-        display: table-cell !important
+        display: table-cell !important;
     }
 }
 
 .visible-print-block {
-    display: none !important
+    display: none !important;
 }
 
 @media print {
