@@ -33,25 +33,25 @@
 
 
 .et-icon-notebook:before {
-    content: "\e00a"
+    content: "\e00a";
 }
 
 .et-icon-book-open:before {
-    content: "\e00b"
+    content: "\e00b";
 }
 
 .et-icon-browser:before {
-    content: "\e00c"
+    content: "\e00c";
 }
 
 .et-icon-presentation:before {
-    content: "\e00e"
+    content: "\e00e";
 }
 
 
 
 .et-icon-facebook:before {
-    content: "\e05d"
+    content: "\e05d";
 }
 
 .et-icon-edit::before{
