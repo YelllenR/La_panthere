@@ -1,4 +1,5 @@
 @import url(./css/variable.css);
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css);
 
 body {
     box-sizing: border-box;
@@ -452,7 +453,7 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background: url("img/texture-paper.png");
+    background: url("img/texture-paper.webp");
     background-attachment: fixed;
     min-height: 400px;
 }
@@ -1228,17 +1229,17 @@ a .bold-link:hover{
 
 
 
-.bg-dots-bg {
-    background-image: url("img/dots-bg.png");
-}
+/* .bg-dots-bg {
+    background-image: url("img/dots-bg.w");
+} */
 
 .bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
+    background-image: url("img/lines-h2-bg.webp");
 }
 
 /* Background for first section in homepage */
 .bg-banniere {
-    background-image: url("img/agence-la-panthere.jpg");
+    background-image: url("img/agence-la-panthere.webp");
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
@@ -1249,7 +1250,7 @@ a .bold-link:hover{
 
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.png");
+    background-image: url("img/image-de-presentation.webp");
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
