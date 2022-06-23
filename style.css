@@ -81,10 +81,10 @@ label,
     z-index: 1;
 }
 
-#navbar-toggle {
+/* #navbar-toggle {
     visibility: collapse;
     width: 32px;
-}
+} */
 
 
 .navbar-header {
@@ -174,7 +174,7 @@ button {
 
 .center-block {
     width: 13vw;
-    height: 17vh;
+    height: 18vh;
     margin: 16px;
 }
 
@@ -188,7 +188,6 @@ button {
     justify-content: center;
     align-items: center;
     width: var(--breakpoint-desktop);
-    height: auto;
 }
 
 .intro-services {
@@ -204,8 +203,7 @@ button {
     width: 90%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: auto;
+
     margin: 16px;
 
 }
@@ -213,7 +211,6 @@ button {
 .box-icon-description {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: 16px;
 }
@@ -230,6 +227,7 @@ button {
 .sub-title-services {
     align-self: center;
     font-size: 1.3em;
+    font-weight: 600;
     margin: 0;
     padding: 16px;
 }
@@ -253,6 +251,18 @@ button {
 
 
 /* Informations section */
+
+.info-background {
+    padding: 40px;
+    width: 60%;
+    margin: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
 .title-informations {
     font-size: clamp(24px, 2vw, 28px);
     color: var(--bg-nav) !important;
@@ -274,16 +284,7 @@ button {
     min-height: 400px;
 }
 
-.info-background {
-    padding: 40px;
-    width: 60%;
-    margin: 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
+
 
 .p-white {
     font-size: clamp(18px, 2.5vw, 20px);
@@ -314,7 +315,7 @@ a .bold-link:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 48px;
+    margin-bottom: 56px;
 }
 
 .bg-repeat {
@@ -336,24 +337,23 @@ a .bold-link:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 65vh;
-    width: 75vw;
-    margin: 24px;
+    height: 70vh;
+    width: 80vw;
 }
 
 .box-portfolio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 55vh !important;
-    width: 35%;
+    height: 60vh;
+    width: 40%;
 }
 
 
 .img-size {
     justify-self: baseline;
-    width: 25vw !important;
-    height: auto!important;
+    width: 30vw;
+    height: auto !important;
     -o-object-fit: cover;
     object-fit: cover;
     justify-self: baseline;
@@ -361,12 +361,13 @@ a .bold-link:hover {
 }
 
 .box-txts {
-    width: 28vw !important;
+    width: 30vw;
     text-align: center;
 }
 
 .title-work {
     font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 600;
     padding: 8px;
     margin: 0;
 }
@@ -389,8 +390,8 @@ a[data-lightbox] {
 }
 
 a[data-lightbox]:hover::before {
-    content: "+";
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+    content: "\f424";
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "fontawesome 4";
     font-size: 32px;
     width: 50px;
     height: 50px;
@@ -438,6 +439,7 @@ a[data-lightbox]:hover img {
 
 .modal-content {
     width: 55vw;
+    border-radius: 24px !important;
 }
 
 .img-responsive {
@@ -447,7 +449,7 @@ a[data-lightbox]:hover img {
 }
 
 .lightbox-caption {
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px)!important;
     text-align: center;
     margin: 0;
 }
@@ -482,7 +484,7 @@ a[data-lightbox]:hover img {
     top: 43%;
     z-index: 1;
     opacity: 0.4;
-    padding: 8px 16px ;
+    padding: 8px 16px;
     left: 20px !important;
 }
 
@@ -496,7 +498,7 @@ a[data-lightbox]:hover img {
     z-index: 1;
     opacity: 0.4;
     padding: 8px 16px;
-    right: 20px;
+    right: 21px!important;
 }
 
 
@@ -704,7 +706,7 @@ li:hover {
 
 
 /* form contact - page two */
-html{
+html {
     box-sizing: border-box;
 }
 
@@ -770,13 +772,12 @@ html{
     overflow-x: hidden;
     overflow-y: hidden;
     padding-left: 16px;
-
 }
 
 
 #form_1 {
     padding: 16px;
-    width: 65%; 
+    width: 65%;
     height: 50%;
 }
 
@@ -805,15 +806,15 @@ html{
 }
 
 
-.logo-form{
+.logo-form {
     position: absolute;
     height: auto;
     top: 10%;
     left: 73%;
     -o-object-position: center;
-       object-position: center;
-       -o-object-fit: contain;
-          object-fit: contain;
+    object-position: center;
+    -o-object-fit: contain;
+    object-fit: contain;
 }
 
 textarea {
@@ -838,7 +839,7 @@ textarea {
     border-radius: 16px;
 }
 
-#box-social{
+#box-social {
     width: 20%;
 }
 
@@ -850,12 +851,13 @@ textarea {
     justify-content: space-between;
     align-items: center;
 }
-.icon-md-f{
+
+.icon-md-f {
     color: #fff;
     font-size: 40px !important;
 }
 
-.icon-md-f:hover{
+.icon-md-f:hover {
     color: #4d3838;
 }
 
@@ -878,17 +880,17 @@ a:hover {
     cursor: pointer;
 }
 
- .d-bloc .icon-round,
+.d-bloc .icon-round,
 .d-bloc .icon-square,
 .d-bloc .icon-rounded,
 .d-bloc .icon-semi-rounded-a,
 .d-bloc .icon-semi-rounded-b {
     border-color: rgba(255, 255, 255, .9);
-} 
- 
+}
+
 .d-bloc .divider-h span {
     border-color: rgba(255, 255, 255, .2);
-} 
+}
 
 .d-bloc #navbar-toggle .icon-bar {
     background: rgba(255, 255, 255, 1);
@@ -896,6 +898,142 @@ a:hover {
 
 
 /* Media queries */
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+    /* header on homepage */
+    .navbar {
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar-brand img {
+        width: 25vw;
+        height: 5vh;
+    }
+
+    .a-header {
+        font-size: clamp(18px, 3vw, 22px);
+    }
+
+    .container-logo-btn {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .hero-bloc-text {
+        font-size: clamp(28px, 3vw, 40px);
+    }
+
+    .btn-homepage {
+        font-size: clamp(14px, 3vw, 16px);
+    }
+
+    .center-block {
+        width: 13vw;
+        height: 15vh;
+    }
+
+    /* Section service */
+    .intro-services {
+        font-size: clamp(20px, 3vw, 24px);
+        margin-top: 40px;
+        width: 70%;
+        padding: 32px 24px 24px 24px;
+    }
+
+    .med-width-whitespace {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .icon-dark-slate-blue {
+        font-size: 4em !important;
+    }
+
+    .quote-reference {
+        width: 80%;
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+
+    /* Section informations */
+
+    .info-background {
+        width: 80%;
+        padding: 0;
+    }
+
+    .title-informations {
+        font-size: clamp(20px, 3vw, 24px);
+        padding-bottom: 24px;
+    }
+
+    .p-white {
+        font-size: clamp(16px, 3vw, 18px);
+    }
+
+
+
+    /* portfolio section */
+
+    .container-portfolio {
+        width: 100%;
+    }
+
+    #portfolio {
+        font-size: clamp(20px, 3vw, 24px);
+        width: 70%;
+        font-weight: 500;
+        margin-top: 24px;
+    }
+
+    .tight-width-whitespace {
+        height: 63vh;
+        width: 80vw;
+    }
+
+    .box-portfolio{
+        width: 45%;
+        height: 60vh !important;
+    }
+
+    .img-size{
+        width: 35vw;
+    }
+
+    .box-txts{
+        width: 35vw;
+    }
+
+    .title-work{
+        font-size: clamp(16px, 3vw, 18px);
+        font-weight: 600;
+    }
+    
+    .p-work{
+        font-size: clamp(14px, 3vw, 16px);
+    }
+
+    #lightbox-modal .modal-dialog {
+        width: 80vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #lightbox-modal .modal-dialog img {
+        height: 60vh;
+        margin: 0 48px 16px 48px;
+        width: 45vw;
+    }
+    .modal-content {
+        width: 62vw;
+    }
+}
+
+
 @media (min-width: 768px) {
     .site-navigation {
         position: absolute;
@@ -973,7 +1111,7 @@ a:hover {
     background-position: top;
     background-repeat: no-repeat;
     background-size: fill;
-    min-height: 500px;
+    min-height: 500px ;
 }
 
 
@@ -984,7 +1122,7 @@ a:hover {
     background-position: top;
     background-repeat: no-repeat;
     background-size: fill;
-    min-height: 700px;
+    min-height: 700px ;
     -webkit-filter: brightness(0.80);
     filter: brightness(0.70);
     -o-object-fit: top center;
@@ -1240,4 +1378,4 @@ a:hover {
     .bloc-mob-center-text {
         text-align: center;
     }
-}
+}}

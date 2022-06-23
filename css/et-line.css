@@ -48,7 +48,11 @@
     content: "\e00e";
 }
 
-
+a[data-lightbox]:hover::before{
+    content: "\f424";
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+}
 
 .et-icon-facebook:before {
     content: "\e05d";
