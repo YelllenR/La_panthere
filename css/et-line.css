@@ -64,20 +64,28 @@ a[data-lightbox]:hover::before{
 
 
 .et-icon-twitter:before {
-    content: "\e05e"
+    content: "\e05e";
 }
 
 
 .et-icon-tumblr:before {
-    content: "\e061"
+    content: "\e061";
 }
 
 .et-icon-linkedin:before {
-    content: "\e062"
+    content: "\e062";
 }
 
 .et-icon-dribbble:before {
-    content: "\e063"
+    content: "\e063";
+}
+
+.a-header::before{
+    content: "\f1d8";
+    clip: auto;
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    visibility: hidden;
 }
 
 .sr-only {
@@ -88,7 +96,6 @@ a[data-lightbox]:hover::before{
     margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
-    border: 0
 }
 
 .sr-only-focusable:active,
@@ -98,5 +105,5 @@ a[data-lightbox]:hover::before{
     height: auto;
     margin: 0;
     overflow: visible;
-    clip: auto
+    clip: auto;
 }
