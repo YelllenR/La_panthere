@@ -201,27 +201,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 68vh;
+    height: 70vh;
     width: 85vw;
-    margin: 32px;
+    margin: 24px;
 }
 
 .box-portfolio {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 70vh !important;
-    width: 40%;
-
+    height: 55vh !important;
+    width: 35%;
 }
 
 
 .img-size {
-    width: 28vw !important;
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
+    justify-self: baseline;
+    width: 25vw !important;
+    height: auto!important;
     -o-object-fit: cover;
     object-fit: cover;
     justify-self: baseline;
@@ -1108,7 +1105,6 @@ a[data-lightbox] {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
 }
 
 a[data-lightbox]:hover::before {
@@ -1139,40 +1135,37 @@ a[data-lightbox]:hover img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+
 }
 
 #lightbox-modal .modal-dialog {
-    width: 100%;
-    margin: 16px auto 0;
+    width: 50vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #lightbox-modal .modal-dialog img {
-    height: 70vh;
-    margin: 16px auto;
+    height: 65vh;
+    margin: 16px 48px 16px 48px;
     width: 40vw;
 }
 
 .modal-content {
-    width: 55vw;
-
+    width: 50vw;
 }
 
 .img-responsive {
     display: flex;
+
 }
 
 .lightbox-caption {
     font-size: 18px;
     text-align: center;
     margin: 0;
-    /* padding: 20px; */
-    /* color: #FFF; */
-    /* background: rgba(0, 0, 0, .5); */
-    /* position: absolute; */
-    /* left: 15px;
-    right: 15px;
-    bottom: 5px; */
 }
 
 .close-lightbox {
@@ -1203,11 +1196,11 @@ a[data-lightbox]:hover img {
     background: rgba(0, 0, 0, .5);
     transition: all .2s ease-in-out;
     position: absolute;
-    top: 45%;
+    top: 43%;
     z-index: 1;
     opacity: 0.4;
-    padding: 8px 16px;
-    left: 25px;
+    padding: 8px 16px ;
+    left: 20px !important;
 }
 
 .next-lightbox {
@@ -1220,7 +1213,7 @@ a[data-lightbox]:hover img {
     z-index: 1;
     opacity: 0.4;
     padding: 8px 16px;
-    right: 25px;
+    right: 20px;
 }
 
 .prev-lightbox {
