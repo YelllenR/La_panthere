@@ -62,21 +62,60 @@ label,
     background: #c27956;
 }
 
-/* header part */
+.bg-banniere {
+    background-image: url("img/agence-la-panthere.webp");
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: fill;
+    min-height: 500px;
+}
+
+
+
+.bg-presentation {
+    background-image: url("img/image-de-presentation.webp");
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: fill;
+    min-height: 700px;
+    -webkit-filter: brightness(0.80);
+    filter: brightness(0.70);
+    -o-object-fit: top center;
+    object-fit: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
 #box-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+/* header part */
+#box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .nav-container {
-    width: 1200px;
+    width: 100%;
     margin: 16px;
 }
 
 .navbar {
     width: auto;
     display: flex;
+    justify-content: space-between;
     height: auto;
     z-index: 1;
 }
@@ -86,7 +125,8 @@ label,
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    margin: 16px;
 }
 
 .navbar-brand img {
@@ -95,10 +135,10 @@ label,
     padding: 0;
 }
 
-.navbar-nav a:hover,
+/* .navbar-nav a:hover,
 .navbar-nav a:focus {
     background: transparent;
-}
+} */
 
 .navbar-collapse {
     display: flex;
@@ -129,7 +169,7 @@ label,
 }
 
 .hero-bloc-text {
-    font-size: clamp(30px, 2vw, 40px);
+    font-size: clamp(24px, 3vw, 40px);
     color: #F3976C !important;
     padding: 16px;
     margin: 0;
@@ -151,8 +191,8 @@ label,
 .btn-homepage {
     color: #FFFFFF !important;
     text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: clamp(16px, 3vw, 18px);
+    font-weight: 600;
 }
 
 button {
@@ -168,7 +208,7 @@ button {
 
 
 .center-block {
-    width: 140px;
+    width: 148px;
     height: 156px;
     margin: 16px;
     border-radius: 45%;
@@ -190,7 +230,7 @@ button {
     align-self: center;
     width: 60%;
     text-align: center;
-    font-size: clamp(22px, 2.5vw, 26px);
+    font-size: clamp(22px, 3vw, 26px);
     padding: 32px;
     margin-top: 16px;
 }
@@ -199,9 +239,7 @@ button {
     width: 90%;
     display: flex;
     justify-content: space-between;
-
     margin: 16px;
-
 }
 
 .box-icon-description {
@@ -217,12 +255,12 @@ button {
     border-color: #364577 !important;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
     margin: 8px;
-    font-size: 5em !important;
+    font-size: clamp(3.5em, 2vw, 8em);
 }
 
 .sub-title-services {
     align-self: center;
-    font-size: 1.3em;
+    font-size: clamp(20px, 2vw, 22px);
     font-weight: 600;
     margin: 0;
     padding: 16px;
@@ -230,7 +268,7 @@ button {
 
 .text-services {
     padding: 8px;
-    font-size: 1.2em;
+    font-size: clamp(18px, 2vw, 20px);
     text-align: center;
     height: auto;
 }
@@ -241,7 +279,7 @@ button {
     margin-top: 1.5em !important;
     margin-bottom: 40px;
     text-align: center;
-    font-size: 1.3em;
+    font-size: clamp(1.1em, 2vw, 1.3em);
 }
 
 
@@ -260,12 +298,20 @@ button {
 }
 
 .title-informations {
-    font-size: clamp(24px, 2vw, 28px);
+    font-size: clamp(22px, 2vw, 28px);
     color: var(--bg-nav) !important;
     font-weight: 700;
     text-align: center;
     padding-bottom: 16px;
     height: 40%;
+}
+
+.p-white {
+    font-size: clamp(18px, 2.5vw, 22px);
+    color: var(--bg-nav) !important;
+    text-align: justify;
+    font-weight: 600;
+    height: 60%;
 }
 
 .bloc-bg-texture::before {
@@ -280,15 +326,6 @@ button {
     min-height: 400px;
 }
 
-
-
-.p-white {
-    font-size: clamp(18px, 2.5vw, 20px);
-    color: var(--bg-nav) !important;
-    text-align: justify;
-    font-weight: 600;
-    height: 60%;
-}
 
 
 .bold-link {
@@ -323,9 +360,10 @@ a .bold-link:hover {
 }
 
 #portfolio {
-    font-size: clamp(22px, 2.5vw, 26px);
+    font-size: clamp(20px, 2vw, 26px);
     text-align: center;
     width: 50%;
+    font-weight: 600;
     padding: 48px;
 }
 
@@ -353,7 +391,6 @@ a .bold-link:hover {
     -o-object-fit: cover;
     object-fit: cover;
     justify-self: baseline;
-
 }
 
 .box-txts {
@@ -362,14 +399,14 @@ a .bold-link:hover {
 }
 
 .title-work {
-    font-size: clamp(16px, 2.5vw, 20px);
+    font-size: clamp(18px, 2vw, 22px);
     font-weight: 600;
-    padding: 8px;
+    padding: 16px 8px 8px 8px;
     margin: 0;
 }
 
 .p-work {
-    font-size: clamp(16px, 2.5vw, 18px);
+    font-size: clamp(16px, 2vw, 18px);
     padding: 8px;
     margin: 0;
 }
@@ -442,6 +479,7 @@ a[data-lightbox]:hover img {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 340px;
 }
 
 .lightbox-caption {
@@ -695,6 +733,34 @@ li:hover {
 
 
 
+.bg-banniere {
+    background-image: url("img/agence-la-panthere.webp");
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: fill;
+    min-height: 500px;
+}
+
+
+
+.bg-presentation {
+    background-image: url("img/image-de-presentation.webp");
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: fill;
+    min-height: 700px;
+    -webkit-filter: brightness(0.80);
+    filter: brightness(0.70);
+    -o-object-fit: top center;
+    object-fit: top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
 
 
 
@@ -933,6 +999,11 @@ a:hover {
     }
 
     /* Section service */
+
+    .container-services {
+        width: 100%;
+    }
+
     .intro-services {
         font-size: clamp(20px, 3vw, 24px);
         margin-top: 40px;
@@ -943,10 +1014,6 @@ a:hover {
     .med-width-whitespace {
         flex-direction: column;
         width: 80%;
-    }
-
-    .icon-dark-slate-blue {
-        font-size: 4em !important;
     }
 
     .quote-reference {
@@ -980,20 +1047,18 @@ a:hover {
     }
 
     #portfolio {
-        font-size: clamp(20px, 3vw, 24px);
         width: 70%;
-        font-weight: 500;
         margin-top: 24px;
     }
 
     .tight-width-whitespace {
-        height: 63vh;
+        height: 60vh;
         width: 80vw;
     }
 
     .box-portfolio {
         width: 45%;
-        height: 60vh !important;
+        height: 58vh !important;
     }
 
     .img-size {
@@ -1005,20 +1070,17 @@ a:hover {
     }
 
     .title-work {
-        font-size: clamp(16px, 3vw, 18px);
         font-weight: 600;
     }
 
-    .p-work {
-        font-size: clamp(14px, 3vw, 16px);
-    }
 
     #lightbox-modal .modal-dialog {
-        width: 80vw;
+        width: 85vw;
         height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
+
     }
 
     #lightbox-modal .modal-dialog img {
@@ -1029,6 +1091,7 @@ a:hover {
 
     .modal-content {
         width: 62vw;
+        margin-top: 24px;
     }
 
 
@@ -1080,22 +1143,195 @@ a:hover {
 }
 
 
-@media screen and (min-width: 767px) {
-    
+@media screen and (max-width: 767px) {
 
+    .nav-container {
+        background-color: var(--clr-tangerine);
+        margin: 0;
+        height: 100px;
+        z-index: 9999;
+        /* position: fixed; */
+    }
 
-    .navbar-brand img {
-        width: 28vw;
-        height: 7vh;
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
     }
 
 
 
+    .navbar-header {
+        height: 100%;
+        width: 90%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* .navbar-collapse {
+        width: 10% !important;
+    } */
+
+    .navbar-brand img {
+        font-size: 40px;
+        height: 100%;
+        align-self: center !important;
+        margin: 0;
+        /* A revoir celui-là */
+    }
+
+
+    .a-header {
+        visibility: hidden;
+    }
+
+    .a-header::before {
+        content: "\f1d8";
+        visibility: visible;
+        clip: auto;
+        font-family: "font awesome 5 free";
+        font-weight: 900;
+        font-size: clamp(18px, 2vw, 24px);
+        padding: 8px;
+        align-self: flex-end;
+    }
+
+
+    .container-logo-btn {
+        width: 100%;
+        height: 250px;
+    }
+
+    .center-block {
+        width: 120px;
+        height: 130px;
+    }
+
+    /* services */
+
+    .container-services {
+        width: 100%;
+    }
+
+    .intro-services {
+        width: 90%;
+    }
+
+    .med-width-whitespace {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quote-reference {
+        width: 90%;
+    }
+
+
+    /* info section */
+    .info-background {
+        width: 90%;
+        padding: 0;
+        margin: 16px;
+    }
+
+    .title-informations {
+        text-align: justify;
+        padding-bottom: 24px;
+    }
+
+    .container-portfolio {
+        width: 100%;
+        padding: 16px;
+    }
+
+    #portfolio {
+        width: 100%;
+        padding: 40px 0px 32px 0px;
+    }
+
+    .tight-width-whitespace {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .box-portfolio {
+        width: 100%;
+        height: 20%;
+        margin-bottom: 40px;
+    }
+
+    .img-size {
+        width: 90%;
+    }
+
+    .box-txts {
+        width: 100%;
+    }
+
+    a[data-lightbox]:hover::before {
+        width: 35px;
+        height: 35px;
+        font-size: 22px;
+    }
+
+    /* #lightbox-modal.modal.fade.show,
+    .modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 100%; 
+        margin: 0;
+    } */
+
+    #lightbox-modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+
+
+    .modal-body {
+        width: 100%;
+        align-self: center;
+    }
+
+
+    .modal {
+        left: 20%;
+        top: 0;
+        width: 100%;
+    }
+
+    .modal-dialog {
+        width: 100%;
+        margin: 0;
+
+    }
+
+    .modal-content {
+
+        margin-top: 32px;
+    }
+
+
+    .close-lightbox {
+        font-size: 20px;
+        width: 32px;
+        height: 32px;
+    }
+
 
 }
-
-
-
 
 
 
@@ -1160,34 +1396,6 @@ a:hover {
 
 
 /* Background for first section in homepage */
-.bg-banniere {
-    background-image: url("img/agence-la-panthere.webp");
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: fill;
-    min-height: 500px;
-}
-
-
-
-.bg-presentation {
-    background-image: url("img/image-de-presentation.webp");
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: fill;
-    min-height: 700px;
-    -webkit-filter: brightness(0.80);
-    filter: brightness(0.70);
-    -o-object-fit: top center;
-    object-fit: top center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
 
 /* @media (max-width: 1024px) {
     .bloc {
@@ -1433,6 +1641,3 @@ a:hover {
         text-align: center;
     }
 } */
-}
-}
-}

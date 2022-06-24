@@ -80,13 +80,6 @@ a[data-lightbox]:hover::before{
     content: "\e063";
 }
 
-.a-header::before{
-    content: "\f1d8";
-    clip: auto;
-    font-family: "font awesome 5 free";
-    font-weight: 900;
-    visibility: hidden;
-}
 
 .sr-only {
     position: absolute;
