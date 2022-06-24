@@ -230,7 +230,7 @@ button {
     align-self: center;
     width: 60%;
     text-align: center;
-    font-size: clamp(22px, 3vw, 26px);
+    font-size: clamp(20px, 3vw, 26px);
     padding: 32px;
     margin-top: 16px;
 }
@@ -450,11 +450,10 @@ a[data-lightbox]:hover img {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #lightbox-modal .modal-dialog {
-    width: 60vw;
+    /* width: 60vw; */
     height: auto;
     display: flex;
     justify-content: center;
@@ -509,33 +508,42 @@ a[data-lightbox]:hover img {
     color: rgba(14, 13, 13, 0.5);
 }
 
-.prev-lightbox {
-    font-size: 20px;
-    color: rgba(255, 255, 255, .9);
+.prev-lightbox::before {
+    content: "\f0d9";
+    font-size: 32px;
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    color: #000;
     background: rgba(0, 0, 0, .5);
     transition: all .2s ease-in-out;
     position: absolute;
     top: 43%;
     z-index: 1;
     opacity: 0.4;
-    padding: 8px 16px;
+    padding: 0 16px;
     left: 20px !important;
 }
 
-.next-lightbox {
-    font-size: 20px;
-    color: rgba(255, 255, 255, .9);
+.next-lightbox::before {
+    content: "\f0da";
+    font-size: 32px;
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    color: #000;
     background: rgba(0, 0, 0, .5);
     transition: all .2s ease-in-out;
     position: absolute;
     top: 43%;
     z-index: 1;
     opacity: 0.4;
-    padding: 8px 16px;
+    padding: 0 16px;
     right: 21px !important;
 }
 
-
+.fa-chevron-right,
+.fa-chevron-left {
+    visibility: hidden;
+}
 
 .snapshot-lb .modal-body {
     padding-bottom: 45px;
@@ -1005,7 +1013,7 @@ a:hover {
     }
 
     .intro-services {
-        font-size: clamp(20px, 3vw, 24px);
+        font-size: clamp(20px, 2vw, 24px);
         margin-top: 40px;
         width: 70%;
         padding: 32px 24px 24px 24px;
@@ -1076,7 +1084,7 @@ a:hover {
 
     #lightbox-modal .modal-dialog {
         width: 85vw;
-        height: auto;
+        height: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1210,14 +1218,16 @@ a:hover {
         height: 130px;
     }
 
-    /* services */
 
+    /* services */
     .container-services {
         width: 100%;
     }
 
     .intro-services {
-        width: 90%;
+        width: 100%;
+        padding: 32px 8px 24px 8px;
+
     }
 
     .med-width-whitespace {
@@ -1227,6 +1237,14 @@ a:hover {
         align-items: center;
     }
 
+    .box-icon-description {
+        margin: 0;
+    }
+
+    .text-services {
+        padding: 0;
+    }
+
     .quote-reference {
         width: 90%;
     }
@@ -1234,7 +1252,7 @@ a:hover {
 
     /* info section */
     .info-background {
-        width: 90%;
+        width: 90vw;
         padding: 0;
         margin: 16px;
     }
@@ -1259,104 +1277,106 @@ a:hover {
         flex-direction: column;
         align-items: center;
         height: 100%;
-        width: 100%;
+        min-width: 320px;
     }
 
     .box-portfolio {
-        width: 100%;
+        min-width: 300px;
         height: 20%;
         margin-bottom: 40px;
     }
 
-    .img-size {
-        width: 90%;
-    }
-
     .box-txts {
-        width: 100%;
+        min-width: 300px;
     }
 
-    a[data-lightbox]:hover::before {
-        width: 35px;
-        height: 35px;
-        font-size: 22px;
+    .img-size,
+    .img-responsive,
+    #lightbox-image {
+        width: 50vw !important;
+        max-height: 70vh;
+        margin: 0!important;
     }
-
-    /* #lightbox-modal.modal.fade.show,
-    .modal {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* width: 100%; 
-        margin: 0;
-    } */
 
     #lightbox-modal {
+        max-height: 90%;
+        max-width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0;
-        width: 100%;
-    }
-
-
-    .modal-body {
-        width: 100%;
-        align-self: center;
-    }
-
-
-    .modal {
-        left: 20%;
-        top: 0;
-        width: 100%;
+        left: 10%;
     }
 
     .modal-dialog {
-        width: 100%;
-        margin: 0;
-
+        all: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
     }
 
-    .modal-content {
 
+    .modal-content,
+    .blocs-lb-container,
+    .snapshot-lb {
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        width: 90%;
+        max-height: 70%;
+        margin-top: 40px;
+    }
+
+    /* .modal-content{
+        display: flex;
+        justify-content: center;
+        align-items:  center;
         margin-top: 32px;
+        min-width: 280px !important;
+        min-height: 600px;
+        left: 0;
+    } */
+
+    .modal-body {
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        width: 80%;
+        max-height: 550px;
     }
 
 
-    .close-lightbox {
-        font-size: 20px;
-        width: 32px;
-        height: 32px;
+    .modal-backdrop {
+        width: 100%;
+        height: 100%;
     }
 
+    /* #lightbox-image{
+        width: 50vw;
+        height: 50%;
+        margin: 8px 16px 8px 16px;
+    }  */
 
+    /* .prev-lightbox::before{
+        left: 15px !important;
+        padding: 0 8px;
+    }
+    
+    .next-lightbox::before{
+        right: 15px !important;
+        padding: 0 8px;
+    }
+
+    .lightbox-caption{
+        min-width: 250px;
+        padding: 8px;
+    }
 }
 
-
-
-/* .nav > li .dropdown-menu a,
-    .nav > li .dropdown-menu a:hover {
-        color: #484848;
-    }
-    .nav-invert .site-navigation {
-        left: 0;
-        right: 0;
-    }
-    .nav-center {
-        text-align: center;
-    }
-
-    .nav-center .navbar-header {
-        width: 100%;
-    } 
-    
-    .nav-center .navbar-header,
-    .nav-center ,
-    .nav-center .nav > li {
-        float: none;
-        display: inline-block;
-    }  */
 .site-navigation {
     width: 80%;
     right: 0;
@@ -1370,6 +1390,7 @@ a:hover {
     } */
 
 
+}
 
 .scrollToTop {
     width: 40px;
