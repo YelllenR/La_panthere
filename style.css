@@ -96,6 +96,7 @@ label,
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 
@@ -224,6 +225,7 @@ button {
     justify-content: center;
     align-items: center;
     width: var(--breakpoint-desktop);
+    margin: 40px;
 }
 
 .intro-services {
@@ -268,8 +270,7 @@ button {
 
 .text-services {
     padding: 8px;
-    font-size: clamp(18px, 2vw, 20px);
-    text-align: center;
+    text-align: justify;
     height: auto;
 }
 
@@ -324,6 +325,7 @@ button {
     background: url("img/texture-paper.webp");
     background-attachment: fixed;
     min-height: 400px;
+    width: 100%;
 }
 
 
@@ -357,6 +359,7 @@ a .bold-link:hover {
 
 .bg-lines-h2-bg {
     background-image: url("img/lines-h2-bg.webp");
+    width: 100%;
 }
 
 #portfolio {
@@ -386,7 +389,7 @@ a .bold-link:hover {
 
 .img-size {
     justify-self: baseline;
-    max-width: 350px;
+    width: 350px;
     height: auto !important;
     -o-object-fit: cover;
     object-fit: cover;
@@ -446,66 +449,85 @@ a[data-lightbox]:hover img {
     animation-fill-mode: none;
 }
 
+
+.modal-backdrop {
+    width: 100%;
+}
+
 #lightbox-modal {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+
 }
 
-#lightbox-modal .modal-dialog {
-    /* width: 60vw; */
-    height: auto;
+.modal-dialog {
+    height: 95%;
+    max-width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-#lightbox-modal .modal-dialog img {
-    height: 65vh;
-    margin: 16px 48px 16px 48px;
-    width: 40vw;
-    border-radius: 16px !important;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 3px 5px 5px rgba(0, 0, 0, 0.25);
-}
 
 .modal-content {
-    width: 55vw;
+    height: 70%;
+    width: 80%;
     border-radius: 24px !important;
-}
-
-.img-responsive {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 340px;
+    position: unset;
+}
+
+.modal-body {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lightbox-image {
+    width: 80%;
+    height: 80%;
+    border-radius: 16px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 }
 
 .lightbox-caption {
     font-size: clamp(14px, 2vw, 18px) !important;
     text-align: center;
-    margin: 0;
+    margin-top: 16px;
+    top: 85%;
 }
 
 .close-lightbox {
     color: #FFF;
-    font-size: 30px;
-    width: 38px;
-    height: 38px;
+    font-size: 35px;
+    width: 40px;
+    height: 40px;
     align-self: flex-end;
     margin: 16px;
     z-index: 20;
     background: rgba(14, 13, 13, 0.5);
     border-style: none;
+    border-radius: 8px;
     line-height: 32px;
     opacity: 0.5;
+    padding-bottom: 8px;
 }
+
 
 .close-lightbox:hover,
 .next-lightbox:hover,
 .prev-lightbox:hover {
     opacity: 1;
-    color: rgba(14, 13, 13, 0.5);
+    color: rgba(14, 13, 13, 0.8);
 }
 
 .prev-lightbox::before {
@@ -517,11 +539,12 @@ a[data-lightbox]:hover img {
     background: rgba(0, 0, 0, .5);
     transition: all .2s ease-in-out;
     position: absolute;
-    top: 43%;
+    top: 40%;
     z-index: 1;
     opacity: 0.4;
     padding: 0 16px;
-    left: 20px !important;
+    left: 4% !important;
+    border-radius: 8px 0 0 8px;
 }
 
 .next-lightbox::before {
@@ -533,26 +556,43 @@ a[data-lightbox]:hover img {
     background: rgba(0, 0, 0, .5);
     transition: all .2s ease-in-out;
     position: absolute;
-    top: 43%;
+    top: 40%;
     z-index: 1;
     opacity: 0.4;
     padding: 0 16px;
-    right: 21px !important;
+    right: 4% !important;
+    border-radius: 0 8px 8px 0;
+}
+
+.next-lightbox:hover::before {
+    content: "\f0da";
+    opacity: 1;
+    color: #000;
+}
+
+
+.prev-lightbox:hover::before {
+    content: "\f0d9";
+    opacity: 1;
+    color: #000;
 }
 
 .fa-chevron-right,
 .fa-chevron-left {
+    display: none;
     visibility: hidden;
 }
 
-.snapshot-lb .modal-body {
+
+.snapshot-lb,
+.modal-body {
     padding-bottom: 45px;
 }
 
-.snapshot-lb .lightbox-caption {
+.snapshot-lb,
+.lightbox-caption {
     padding: 0;
     color: rgba(0, 0, 0, .5);
-    background: none;
 }
 
 
@@ -1051,7 +1091,8 @@ a:hover {
     /* portfolio section */
 
     .container-portfolio {
-        width: 100%;
+        width: 105vw !important;
+        ;
     }
 
     #portfolio {
@@ -1061,16 +1102,13 @@ a:hover {
 
     .tight-width-whitespace {
         height: 60vh;
-        width: 80vw;
+        width: 95vw;
     }
 
     .box-portfolio {
-        width: 45%;
+        width: 80vw;
         height: 58vh !important;
-    }
-
-    .img-size {
-        width: 250px;
+        margin: 16px;
     }
 
     .box-txts {
@@ -1082,26 +1120,44 @@ a:hover {
     }
 
 
-    #lightbox-modal .modal-dialog {
-        width: 85vw;
-        height: 90%;
+    #lightbox-modal {
+        width: 100% !important;
+        height: 99%;
         display: flex;
         justify-content: center;
         align-items: center;
-
+        overflow: hidden;
     }
 
-    #lightbox-modal .modal-dialog img {
-        height: 60vh;
-        margin: 0 48px 16px 48px;
-        width: 45vw;
+    .modal-dialog {
+        max-width: 100%;
+    }
+    .modal-body {
+        width: 100%;
     }
 
-    .modal-content {
-        width: 62vw;
-        margin-top: 24px;
+    #lightbox-image {
+        width: 80%;
+        height: 80%;
+        margin: 16px;
     }
 
+
+    .img-responsive {
+        width: 320px;
+    }
+
+    .prev-lightbox::before {
+        content: "\f0d9";
+        padding: 0 16px;
+        left: 5%;
+    }
+
+    .fa-chevron-right,
+    .fa-chevron-left {
+        display: none;
+        visibility: hidden;
+    }
 
 
     /* contact form */
@@ -1151,7 +1207,7 @@ a:hover {
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) and (min-width: 320px) {
 
     .nav-container {
         background-color: var(--clr-tangerine);
@@ -1168,8 +1224,6 @@ a:hover {
         height: 100px;
     }
 
-
-
     .navbar-header {
         height: 100%;
         width: 90%;
@@ -1178,10 +1232,6 @@ a:hover {
         justify-content: space-between;
         align-items: center;
     }
-
-    /* .navbar-collapse {
-        width: 10% !important;
-    } */
 
     .navbar-brand img {
         font-size: 40px;
@@ -1268,7 +1318,7 @@ a:hover {
     }
 
     #portfolio {
-        width: 100%;
+        width: 90%;
         padding: 40px 0px 32px 0px;
     }
 
@@ -1290,158 +1340,71 @@ a:hover {
         min-width: 300px;
     }
 
-    .img-size,
-    .img-responsive,
-    #lightbox-image {
-        width: 50vw !important;
-        max-height: 70vh;
-        margin: 0!important;
-    }
-
     #lightbox-modal {
-        max-height: 90%;
-        max-width: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        left: 10%;
+        width: 99%;
+        height: 99%;    
+        left: 20%;
+        border: 1px solid red;
     }
 
     .modal-dialog {
-        all: unset;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 90%;
+        height: 100%;
+        max-width: 60%;
+        align-self: center;
+        margin: 0;
+        border: 1px solid red;
     }
 
-
-    .modal-content,
-    .blocs-lb-container,
-    .snapshot-lb {
-        all: unset;
+    .modal-content {
+        max-height: 70%;
+        max-width: 100%;
+        border-radius: 24px !important;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        background-color: white;
-        width: 90%;
-        max-height: 70%;
-        margin-top: 40px;
-    }
-
-    /* .modal-content{
-        display: flex;
         justify-content: center;
-        align-items:  center;
-        margin-top: 32px;
-        min-width: 280px !important;
-        min-height: 600px;
-        left: 0;
-    } */
+        align-items: center;
+        position: unset;
+    }
+    #lightbox-image {
+        width: 80%;
+        height: 80%;
+    }
 
     .modal-body {
-        all: unset;
+        width: 90%;
+        height: 70%;
         display: flex;
         flex-direction: column;
-        justify-content: baseline;
+        justify-content: space-between;
         align-items: center;
-        width: 80%;
-        max-height: 550px;
     }
 
-
-    .modal-backdrop {
-        width: 100%;
-        height: 100%;
+    .img-size {
+        width: 250px;
+        height: 250px;
     }
 
-    /* #lightbox-image{
-        width: 50vw;
-        height: 50%;
-        margin: 8px 16px 8px 16px;
-    }  */
-
-    /* .prev-lightbox::before{
-        left: 15px !important;
-        padding: 0 8px;
-    }
-    
-    .next-lightbox::before{
-        right: 15px !important;
-        padding: 0 8px;
+    .prev-lightbox::before,
+    .next-lightbox::before {
+        font-size: 30px;
+        padding: 0 12px;
     }
 
-    .lightbox-caption{
-        min-width: 250px;
-        padding: 8px;
+    .close-lightbox {
+        margin: 8px;
     }
-}
 
-.site-navigation {
-    width: 80%;
-    right: 0;
-    margin-right: 0px;
-    margin-top: 20px;
-}
-
-/* .nav-center.mini-nav .navbar-toggle {
-        float: none;
-        margin: 10px auto 0;
-    } */
-
+    .fa-chevron-right,
+    .fa-chevron-left {
+        display: none;
+        visibility: hidden;
+    }
 
 }
 
-.scrollToTop {
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    opacity: 0;
-    z-index: 500;
-    transition: all .3s ease-in-out;
-}
-
-.scrollToTop span {
-    margin-top: 6px;
-}
-
-.showScrollTop {
-    font-size: 14px;
-    opacity: 1;
-}
 
 
-
-
-
-/* Background for first section in homepage */
-
-/* @media (max-width: 1024px) {
-    .bloc {
-        padding-left: 20px;
-        padding-right: 20px;
-    } */
-
-/* .bloc.full-width-bloc,
-    .bloc-tile-2.full-width-bloc .container,
-    .bloc-tile-3.full-width-bloc .container,
-    .bloc-tile-4.full-width-bloc .container {
-        padding-left: 0;
-        padding-right: 0;
-    } */
 /* 
-@media (max-width: 992px) and (min-width: 768px) {
-    .navbar .nav {
-        max-width: 80%
-    }
-
-    .nav-center.navbar .nav {
-        max-width: 100%
-    }
-} */
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
@@ -1452,7 +1415,7 @@ a:hover {
     .b-parallax {
         background-attachment: scroll;
     }
-}
+} */
 
 /* @media (max-width: 991px) {
     .container {
