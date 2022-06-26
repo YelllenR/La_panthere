@@ -170,7 +170,7 @@ label,
 }
 
 .hero-bloc-text {
-    font-size: clamp(24px, 3vw, 40px);
+    font-size: clamp(22px, 3vw, 40px);
     color: #F3976C !important;
     padding: 16px;
     margin: 0;
@@ -484,7 +484,7 @@ a[data-lightbox]:hover img {
 }
 
 .modal-body {
-    width: 70%;
+    width: 90%;
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -493,8 +493,9 @@ a[data-lightbox]:hover img {
 }
 
 #lightbox-image {
-    width: 80%;
-    height: 80%;
+    max-width: 75%;
+    min-height: 80%;
+    max-height: 90%;
     border-radius: 16px;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 }
@@ -526,61 +527,30 @@ a[data-lightbox]:hover img {
 .close-lightbox:hover,
 .next-lightbox:hover,
 .prev-lightbox:hover {
-    opacity: 1;
-    color: rgba(14, 13, 13, 0.8);
+    opacity: 1.0;
+    color: #FFF;
 }
 
-.prev-lightbox::before {
-    content: "\f0d9";
-    font-size: 32px;
-    font-family: "font awesome 5 free";
-    font-weight: 900;
-    color: #000;
+.next-lightbox,
+.prev-lightbox {
+    font-size: 20px;
+    color: rgba(255, 255, 255, .9);
     background: rgba(0, 0, 0, .5);
     transition: all .2s ease-in-out;
     position: absolute;
     top: 40%;
     z-index: 1;
     opacity: 0.4;
-    padding: 0 16px;
-    left: 4% !important;
-    border-radius: 8px 0 0 8px;
 }
 
-.next-lightbox::before {
-    content: "\f0da";
-    font-size: 32px;
-    font-family: "font awesome 5 free";
-    font-weight: 900;
-    color: #000;
-    background: rgba(0, 0, 0, .5);
-    transition: all .2s ease-in-out;
-    position: absolute;
-    top: 40%;
-    z-index: 1;
-    opacity: 0.4;
-    padding: 0 16px;
-    right: 4% !important;
-    border-radius: 0 8px 8px 0;
+.next-lightbox {
+    padding: 8px;
+    right: 25px;
 }
 
-.next-lightbox:hover::before {
-    content: "\f0da";
-    opacity: 1;
-    color: #000;
-}
-
-
-.prev-lightbox:hover::before {
-    content: "\f0d9";
-    opacity: 1;
-    color: #000;
-}
-
-.fa-chevron-right,
-.fa-chevron-left {
-    display: none;
-    visibility: hidden;
+.prev-lightbox {
+    padding: 8px;
+    left: 25px;
 }
 
 
@@ -1033,9 +1003,7 @@ a:hover {
         height: 40vh;
     }
 
-    .hero-bloc-text {
-        font-size: clamp(28px, 3vw, 40px);
-    }
+
 
     .btn-homepage {
         font-size: clamp(14px, 3vw, 16px);
@@ -1092,7 +1060,7 @@ a:hover {
 
     .container-portfolio {
         width: 105vw !important;
-        ;
+
     }
 
     #portfolio {
@@ -1122,18 +1090,24 @@ a:hover {
 
     #lightbox-modal {
         width: 100% !important;
-        height: 99%;
+        height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        overflow: hidden;
+        overflow-y: hidden;
     }
 
     .modal-dialog {
-        max-width: 100%;
+        width: 90%;
+        height: 100%;
     }
+
     .modal-body {
-        width: 100%;
+        height: 100%;
+        width: 90%;
+    }
+
+    .modal-content {
+        width: 80%;
     }
 
     #lightbox-image {
@@ -1142,26 +1116,16 @@ a:hover {
         margin: 16px;
     }
 
-
     .img-responsive {
         width: 320px;
     }
 
-    .prev-lightbox::before {
-        content: "\f0d9";
-        padding: 0 16px;
-        left: 5%;
+    .prev-lightbox, .next-lightbox{
+        padding: 8px;
+        border-radius: 2px;
     }
-
-    .fa-chevron-right,
-    .fa-chevron-left {
-        display: none;
-        visibility: hidden;
-    }
-
 
     /* contact form */
-
     .box-header {
         width: 90%;
     }
@@ -1268,6 +1232,9 @@ a:hover {
         height: 130px;
     }
 
+    .flex-centre {
+        width: 100%;
+    }
 
     /* services */
     .container-services {
@@ -1341,38 +1308,41 @@ a:hover {
     }
 
     #lightbox-modal {
-        width: 99%;
-        height: 99%;    
-        left: 20%;
-        border: 1px solid red;
+        width: 100%;
+        height: 100%;
     }
 
     .modal-dialog {
         height: 100%;
-        max-width: 60%;
-        align-self: center;
+        max-width: 100%;
         margin: 0;
-        border: 1px solid red;
     }
 
     .modal-content {
-        max-height: 70%;
-        max-width: 100%;
+        height: 60%;
+        max-width: 98%;
+        min-width: 90%;
         border-radius: 24px !important;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: unset;
     }
+
     #lightbox-image {
-        width: 80%;
-        height: 80%;
+        min-width: 80%;
+        max-width: 95%;
+        min-height: 80%;
+        max-height: 95%;
+        -o-object-fit: cover;
+           object-fit: cover;
+           -o-object-position: center;
+              object-position: center;
     }
 
     .modal-body {
-        width: 90%;
-        height: 70%;
+        width: 95%;
+        height: 90%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1384,21 +1354,37 @@ a:hover {
         height: 250px;
     }
 
-    .prev-lightbox::before,
-    .next-lightbox::before {
-        font-size: 30px;
-        padding: 0 12px;
+    .prev-lightbox {
+        top: 85%;
+        left: 2%;
+        padding: 8px;
+        border-radius: 2px;
+        font-size: clamp(16px, 2vw, 20px);
+        color: #000000;
+        opacity: 1;
+    }
+
+    .next-lightbox {
+        top: 85%;
+        right: 2%;
+        padding: 8px;
+        border-radius: 2px;
+        font-size: clamp(16px, 2vw, 20px);
+        font-size: 16px;
+        color: #000000;
+        opacity: 1;
     }
 
     .close-lightbox {
         margin: 8px;
+        font-size: 26px;
+        padding-bottom: 8px;
     }
 
-    .fa-chevron-right,
-    .fa-chevron-left {
-        display: none;
-        visibility: hidden;
+    .lightbox-caption{
+        width: 80%;
     }
+
 
 }
 
@@ -1417,211 +1403,3 @@ a:hover {
     }
 } */
 
-/* @media (max-width: 991px) {
-    .container {
-        width: 100%;
-    }
-
-    .b-parallax {
-        background-attachment: scroll;
-    }
-
-    #hero-bloc {
-        overflow-x: hidden;
-        position: relative;
-    }
-
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
-
-    .bloc-group,
-    .bloc-group .bloc {
-        display: block;
-        width: 100%;
-    }
-
-    .bloc-fill-screen .fill-bloc-top-edge,
-    .bloc-fill-screen .fill-bloc-bottom-edge {
-        padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
-} */
-
-/* @media (max-width: 767px) { */
-
-/* .page-container {
-        overflow-x: hidden;
-        position: relative;
-    } */
-/* h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    #disqus_thread {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-    }
-
-    .b-parallax {
-        background-attachment: scroll;
-    }
-
-    .navbar .nav {
-        padding-top: 0;
-        border-top: 1px solid rgba(0, 0, 0, .2);
-        float: none !important;
-    } */
-
-/* .navbar.row {
-        margin-left: 0;
-        margin-right: 0;
-    } */
-/* .site-navigation {
-        position: inherit;
-        transform: none;
-        -webkit-transform: none;
-        -ms-transform: none;
-    } */
-
-/* .nav > li {
-        margin-top: 0;
-        border-bottom: 1px solid rgba(0, 0, 0, .1);
-        background: rgba(0, 0, 0, .05);
-        text-align: left;
-        padding-left: 15px;
-        width: 100%;
-    }
-    .nav > li:hover {
-        background: rgba(0, 0, 0, .08);
-    } */
-/* .dropdown .dropdown a .caret {
-        float: none;
-        margin: 5px 0 0 10px !important;
-        border: 4px solid black;
-        border-bottom-color: transparent;
-        border-right-color: transparent;
-        border-left-color: transparent;
-    } */
-
-/* #hero-bloc .navbar .nav {
-        background: rgba(0, 0, 0, .8);
-    }
-
-    #hero-bloc .navbar .nav a {
-        color: rgba(255, 255, 255, .6);
-    }
-
-    .hero {
-        padding: 50px 0;
-    }
-
-    .hero-nav {
-        left: -1px;
-        right: -1px;
-    } */
-/* 
-    .navbar-collapse {
-        padding: 0;
-        overflow-x: hidden;
-        box-shadow: none;
-    }
-
-    /* .navbar-brand img {
-        max-height: 40px;
-        width: auto;
-    } */
-
-/* .navbar-header {
-        float: none;
-        width: 100%;
-        margin: 8px;
-    }
-
-    .nav-invert .navbar-toggle {
-        float: left;
-        margin-left: 10px;
-    }
-
-    .bloc {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .bloc-xxl,
-    .bloc-xl {
-        padding: 40px 0;
-    } */
-
-/* .bloc-md {
-        padding-left: 0;
-        padding-right: 0;
-    } */
-/* 
-    .bloc-tile-2 .container,
-    .bloc-tile-3 .container,
-    .bloc-tile-4 .container,
-    .bloc-fill-screen .fill-bloc-top-edge,
-    .bloc-fill-screen .fill-bloc-bottom-edge {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .a-block {
-        padding: 0 10px;
-    }
-
-    .btn-dwn {
-        display: none;
-    }
-
-    .voffset {
-        margin-top: 5px;
-    }
-
-    .voffset-md {
-        margin-top: 20px;
-    } */
-
-/* .voffset-lg {
-        margin-top: 30px;
-    } */
-
-/* form {
-        padding: 5px;
-    } */
-/* 
-    .close-lightbox {
-        display: inline-block;
-    }
-
-    .blocsapp-device-iphone5 {
-        background-size: 216px 425px;
-        padding-top: 60px;
-        width: 216px;
-        height: 425px;
-    }
-
-    .blocsapp-device-iphone5 img {
-        width: 180px;
-        height: 320px;
-    }
-}
-
-@media (max-width: 400px) {
-    .bloc {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media (max-width: 767px) {
-    .bloc-mob-center-text {
-        text-align: center;
-    }
-} */
