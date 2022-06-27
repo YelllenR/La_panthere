@@ -1,5 +1,59 @@
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css);
 
+@font-face {
+    font-family: et-line;
+    src: url(../fonts/et-line.svg);
+    src: url(../fonts/et-line.eot?#iefix) format('embedded-opentype'), url(../fonts/et-line.ttf) format('truetype'), url(../fonts/et-line.svg#et-line) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+.et-icon-browser,
+.et-icon-document,
+.et-icon-dribbble,
+.et-icon-edit,
+.et-icon-envelope,
+.et-icon-expand,
+.et-icon-facebook,
+.et-icon-notebook,
+.et-icon-presentation,
+.et-icon-tumblr,
+.et-icon-twitter,
+.et-icon-upload {
+    font-family: et-line;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+}
+
+
+.et-icon-browser:before {
+    content: "\e00c";
+}
+
+.et-icon-presentation:before {
+    content: "\e00e";
+}
+
+.et-icon-facebook:before {
+    content: "\e05d"
+}
+
+.et-icon-dribbble:before {
+    content: "\e063"
+}
+
+.et-icon-edit::before {
+    content: "\e01c"
+}
+
+
+
 
 body {
     box-sizing: border-box;
@@ -163,6 +217,15 @@ img {
 
 .a-header:hover {
     font-weight: 800 !important;
+}
+
+
+.icon-bar::before {
+    content: "\f0c9";
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    background-color: transparent;
+    font-size: clamp(22px, 2vw, 24px);
 }
 
 /* section 1 */
@@ -465,6 +528,12 @@ a[data-lightbox]:hover::before {
     -webkit-transform: translateY(-50%);
 }
 
+a[data-lightbox]:hover::before {
+    content: "\f424";
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+}
+
 a[data-lightbox]:hover img {
     opacity: 0.6;
     -webkit-animation-fill-mode: none;
@@ -495,7 +564,7 @@ a[data-lightbox]:hover img {
 
 
 .modal-content {
-    height: 70%;
+    height: 80%;
     width: 80%;
     border-radius: 24px !important;
     display: flex;
@@ -515,9 +584,8 @@ a[data-lightbox]:hover img {
 }
 
 #lightbox-image {
-    max-width: 75%;
-    min-height: 80%;
-    max-height: 90%;
+    width: 70%;
+    height: 80%;
     border-radius: 16px;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
 }
@@ -1129,6 +1197,7 @@ a:hover {
 
     .modal-content {
         width: 80%;
+        height: 80%;
     }
 
     #lightbox-image {
