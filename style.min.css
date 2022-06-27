@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: et-line;
-    src: url(../fonts/et-line.svg);
-    src: url(../fonts/et-line.eot?#iefix) format('embedded-opentype'), url(../fonts/et-line.ttf) format('truetype'), url(../fonts/et-line.svg#et-line) format('svg');
+    src: url(./fonts/et-line.svg);
+    src: url(./fonts/et-line.eot) format('embedded-opentype'), url(./fonts/et-line.ttf) format('truetype'), url(./fonts/et-line.svg) format('svg');
     font-weight: 400;
     font-style: normal
 }
@@ -39,13 +39,6 @@
     content: "\e00e"
 }
 
-.et-icon-facebook:before {
-    content: "\e05d"
-}
-
-.et-icon-dribbble:before {
-    content: "\e063"
-}
 
 .et-icon-edit::before {
     content: "\e01c"
@@ -102,32 +95,6 @@ p {
     background: #c27956
 }
 
-.bg-banniere {
-    background-image: url(img/agence-la-panthere.webp);
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: fill;
-    min-height: 500px
-}
-
-.bg-presentation {
-    background-image: url(img/image-de-presentation.webp);
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: fill;
-    min-height: 700px;
-    -webkit-filter: brightness(.8);
-    filter: brightness(.7);
-    -o-object-fit: top center;
-    object-fit: top center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1
-}
 
 a,
 button {
@@ -135,7 +102,12 @@ button {
     outline: 0 !important
 }
 
-#box-container {
+#box-container,
+#box-container-header,
+#box-container-services,
+#box-container-presentation, 
+#box-container-contact, 
+#box-container-footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,9 +207,6 @@ img {
     position: relative
 }
 
-.d-bloc button:hover {
-    color: rgba(255, 255, 255, .9)
-}
 
 .btn-homepage {
     color: #fff !important;
@@ -385,9 +354,6 @@ button {
     color: #fff
 }
 
-a .bold-link:hover {
-    color: #f3976c !important
-}
 
 #box-container-portfolio {
     display: flex;
@@ -690,12 +656,6 @@ a[data-lightbox]:hover img {
     color: #f3976c !important
 }
 
-.title-footer {
-    font-size: 18px;
-    color: #000 !important;
-    align-self: flex-start;
-    font-weight: 700
-}
 
 .social-links {
     display: flex;
@@ -738,7 +698,7 @@ a[data-lightbox]:hover img {
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
-    background-size: fill;
+    background-size: cover;
     min-height: 500px;
     width: 100%
 }
@@ -748,12 +708,12 @@ a[data-lightbox]:hover img {
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
-    background-size: fill;
+    background-size:cover;
     min-height: 700px;
     -webkit-filter: brightness(.8);
     filter: brightness(.7);
-    -o-object-fit: top center;
-    object-fit: top center;
+    -o-object-fit:cover;
+       object-fit:cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1477,7 +1437,7 @@ a:hover {
 
     #message::-webkit-input-placeholder {
         color: #fff !important;
-        opacity: .8
+        opacity: .8;
     }
 
     #message::-moz-placeholder {
