@@ -933,7 +933,7 @@ textarea {
 
 #message::placeholder {
     color: #fff !important;
-    opacity: .8
+    opacity: .8;
 }
 
 .btn-form {
@@ -962,7 +962,7 @@ textarea {
     justify-content: center;
     align-items: center;
     margin-top: 32px;
-    font-size: 1px
+    font-size: 1px;
 }
 
 .icon-md-f {
