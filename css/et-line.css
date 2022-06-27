@@ -1,7 +1,7 @@
 @font-face {
     font-family: et-line;
     src: url(../fonts/et-line.svg);
-    src: url(../fonts/et-line.eot?#iefix) format('embedded-opentype'), url(../fonts/et-line.woff) format('woff'), url(../fonts/et-line.ttf) format('truetype'), url(../fonts/et-line.svg#et-line) format('svg');
+    src: url(../fonts/et-line.eot?#iefix) format('embedded-opentype'), url(../fonts/et-line.ttf) format('truetype'), url(../fonts/et-line.svg#et-line) format('svg');
     font-weight: 400;
     font-style: normal
 }
@@ -48,7 +48,11 @@
     content: "\e00e";
 }
 
-
+a[data-lightbox]:hover::before{
+    content: "\f424";
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+}
 
 .et-icon-facebook:before {
     content: "\e05d";
@@ -60,20 +64,28 @@
 
 
 .et-icon-twitter:before {
-    content: "\e05e"
+    content: "\e05e";
 }
 
 
 .et-icon-tumblr:before {
-    content: "\e061"
+    content: "\e061";
 }
 
 .et-icon-linkedin:before {
-    content: "\e062"
+    content: "\e062";
 }
 
 .et-icon-dribbble:before {
-    content: "\e063"
+    content: "\e063";
+}
+
+.icon-bar::before{
+    content: "\f0c9";
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    background-color: transparent;
+    font-size: clamp(22px, 2vw, 24px);
 }
 
 .sr-only {
@@ -84,7 +96,6 @@
     margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
-    border: 0
 }
 
 .sr-only-focusable:active,
@@ -94,5 +105,5 @@
     height: auto;
     margin: 0;
     overflow: visible;
-    clip: auto
+    clip: auto;
 }
