@@ -10,9 +10,7 @@
 		content="L'agence La Panthère est une agence aidant les professionnels à augmenter leur visibilités sur internet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-
 	<link rel="shortcut icon" type="image/png" href="favicon.jpg">
-	<link rel="preload" href="style.min.css" as="style">
 	<link rel="stylesheet" type="text/css" href="style.min.css">
 	<link rel="preload" as="image" href="./img/lines-h2-bg.webp" type="image/webp">
 	<link rel="preload" as="image" href="./img/agence-la-panthere.webp" type="image/webp">
@@ -32,7 +30,7 @@
 
 <body>
 	<!-- header -->
-	<header id="box-container">
+	<header id="box-container-header">
 		<nav class="nav-container">
 			<div class="navbar">
 				<div class="navbar-header">
@@ -41,7 +39,7 @@
 					</div>
 
 					<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse"
-						data-target=".navbar-1">.
+						data-target=".navbar-1" title="Barre de navidation">
 						<span class="icon-bar"></span>
 					</button>
 				</div>
@@ -94,7 +92,7 @@
 		</section>
 
 		<!-- Services section -->
-		<section id="box-container">
+		<section id="box-container-services">
 			<div class="container-services">
 
 				<h2 id="intro-services">
@@ -152,7 +150,7 @@
 		</section>
 
 		<!--Informations-->
-		<aside id="box-container">
+		<aside id="box-container-presentation">
 			<div class="bloc bg-presentation bloc-bg-texture">
 				<div class="info-background">
 					<h2 id="title-informations">
@@ -191,7 +189,8 @@
 						<a href="#" data-lightbox="img/books-250w.webp" data-gallery-id="gallery-1"
 							data-caption="Refonte d'un site web pour un journal local" data-frame="snapshot-lb">
 							<img src="img/books-250w.webp" srcset="img/books-340w.webp 340w, 
-										img/books-450w.webp 450w" alt="Photo du nouveau site fait par notre équipe pour un journal lyonnais"
+										img/books-450w.webp 450w" sizes="50vw"
+								alt="Photo du nouveau site fait par notre équipe pour un journal lyonnais"
 								class="img-responsive img-size" />
 						</a>
 
@@ -211,7 +210,7 @@
 						<a href="#" data-lightbox="img/photograph-250w.webp" data-gallery-id="gallery-1"
 							data-caption="Création d'un site web pour photographes" data-frame="snapshot-lb">
 							<img src="img/photograph-250w.webp" srcset="img/photograph-340w.webp 340w,
-										img/photograph-450w.webp 450w" class="img-responsive img-size"
+										img/photograph-450w.webp 450w" sizes="50vw" class="img-responsive img-size"
 								alt="Photo de la création d'un site web pour photographes" />
 						</a>
 
@@ -236,7 +235,7 @@
 						<a href="#" data-lightbox="img/materials-250w.webp" data-gallery-id="gallery-1"
 							data-caption="Création d'un site internet pour un voyageur" data-frame="snapshot-lb">
 							<img src="img/materials-250w.webp" srcset="img/materials-340w.webp 340w,
-										img/materials-450w.webp 450w" class="img-responsive img-size"
+										img/materials-450w.webp 450w" sizes="50vw" class="img-responsive img-size"
 								alt="Photo de la création d'un site web pour voyageur" />
 						</a>
 
@@ -258,7 +257,7 @@
 						<a href="#" data-lightbox="img/pc-250w.webp" data-gallery-id="gallery-1"
 							data-caption="Conception d'un site pour une agence de mariage" data-frame="snapshot-lb">
 							<img src="img/pc-250w.webp" srcset="img/pc-340w.webp 340w,
-							img/pc-450w.webp 450w" class="img-responsive img-size"
+							img/pc-450w.webp 450w" sizes="50vw" class="img-responsive img-size"
 								alt="Photo de la création d'un site web pour agence de mariage" />
 						</a>
 
@@ -279,7 +278,7 @@
 		</section>
 
 		<!--Contact-->
-		<aside id="box-container">
+		<aside id="box-container-contact">
 			<div class="bloc bg-banniere bloc-bg-texture texture-paper flex-centre">
 				<div class="box-contact">
 
@@ -297,7 +296,7 @@
 	</main>
 
 	<!--Footer-->
-	<footer id="box-container">
+	<footer id="box-container-footer">
 		<div class="bgc-atomic-tangerine">
 
 			<div class="footer-box">
@@ -320,19 +319,19 @@
 
 					<div class="social-links">
 						<div class="social-box">
-							<a href="https://twitter.com/">Twitter
+							<a href="https://twitter.com/" title="Twitter">
 								<span class="fa fa-twitter icon-md social"></span>
 							</a>
 
-							<a href="https://facebook.com/"> Facebook
+							<a href="https://facebook.com/" title="Facebook">
 								<span class="fa fa-facebook icon-md social"></span>
 							</a>
 
-							<a href="https://dribbble.com/">Dribble
+							<a href="https://dribbble.com/" title="Dribble">
 								<span class="fa fa-dribbble icon-md social"></span>
 							</a>
 
-							<a href="https://instagram.com/">Instagram
+							<a href="https://instagram.com/" title="Instagram">
 								<span class="fa fa-instagram icon-md social"></span>
 							</a>
 						</div>

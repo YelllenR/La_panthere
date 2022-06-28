@@ -7,17 +7,12 @@
 	<meta name="keywords" content="agence web design lyon, agence web design">
 	<meta name="description"
 		content="L'agence La Panthère est une agence aidant les professionnels à augmenter leur visibilités sur internet">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="shortcut icon" type="image/png" href="favicon.jpg">
-	<link rel="preload" href="style.min.css" as="style">
 	<link rel="stylesheet" type="text/css" href="style.min.css">
 
-
-
 	<script src="https://kit.fontawesome.com/67fa93fe08.js" crossorigin="anonymous"></script>
-
 
 	<title>Agence La Panthère contact</title>
 
@@ -31,12 +26,12 @@
 				Parlons web design !
 			</h1>
 
-			<a href="index.html">
+			<a href="index.html" title="Accueil">
+				<div class="back">Accueil </div>
 				<span class="back-icon"></span>
-				<Button class="back" type="button">
-					Accueil
-				</Button>
 			</a>
+			
+			
 		</div>
 	</header>
 
@@ -46,44 +41,46 @@
 				Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
 				Parlez-nous de votre projet en complétant le formulaire ci-dessous.
 			</p>
-			<h2 class="form">
-				FORMULAIRE DE CONTACT
-			</h2>
+
 		</div>
 
 		<section class="box-form">
+			<h2 class="form">
+				FORMULAIRE DE CONTACT
+			</h2>
+
 			<div class="box-in-form">
 
-				<form id="form_1" novalidate success-msg="Your message has been sent."
-					fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+
+				<form id="form_1" method="post" action="./includes/form_1.php">
 
 					<div class="form-group">
 						<label for="name" class="text-form">
 							Nom
 						</label>
-						<input id="name" class="form-control" required>
+						<input id="name" class="form-control" required placeholder="John DOE">
 					</div>
 
 					<div class="form-group">
 						<label for="email" class="text-form">
 							Adresse email
 						</label>
-						<input type="email" id="email" class="form-control" required>
+						<input type="email" id="email" class="form-control" required placeholder="john.doe@orange.fr">
 					</div>
 
 					<div class="form-group">
 						<label for="text" class="text-form">
 							Comment nous avez-vous connu ?
 						</label>
-						<input class="form-control" id="text" id="input_504" required>
+						<input class="form-control" id="text" required>
 					</div>
 
 					<div class="form-group">
 						<label for="message" class="text-form">
 							Brief de votre projet
 						</label>
-						<textarea id="message" class="form-control" rows="10" cols="50" required
-							placeholder="Ajoutez autant de détails que nécessaire">
+						<textarea id="message" class="form-control" rows="10" cols="50"
+							placeholder="Ajoutez autant de détails que nécessaire" required>
 						</textarea>
 					</div>
 
@@ -92,7 +89,7 @@
 					</button>
 				</form>
 
-				<img src="./img/logo 1.svg" alt="logo de l'agence" class="logo-form">
+				<img src="./img/logo-1.svg" alt="logo de l'agence" class="logo-form">
 
 			</div>
 
@@ -102,19 +99,19 @@
 	<footer id="box-container-footer">
 
 		<div class="social-links-form">
-			<a href="https://twitter.com/">Twitter
+			<a href="https://twitter.com/" title="Twitter">
 				<span class="fa fa-twitter icon-md-f social"></span>
 			</a>
 
-			<a href="https://facebook.com/"> Facebook
+			<a href="https://facebook.com/" title="Facebook">
 				<span class="fa fa-facebook icon-md-f social"></span>
 			</a>
 
-			<a href="https://dribbble.com/">Dribble
+			<a href="https://dribbble.com/" title="Dribble">
 				<span class="fa fa-dribbble icon-md-f social"></span>
 			</a>
 
-			<a href="https://instagram.com/">Instagram
+			<a href="https://instagram.com/" title="Instagram">
 				<span class="fa fa-instagram icon-md-f social"></span>
 			</a>
 		</div>
