@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: et-line;
-    src: url(./fonts/et-line.svg);
-    src: url(./fonts/et-line.eot) format('embedded-opentype'), url(./fonts/et-line.ttf) format('truetype'), url(./fonts/et-line.svg) format('svg');
+    src: url(./fonts/et-line.eot);
+    src: url(./fonts/et-line.woff) format('woff'), url(./fonts/et-line.ttf) format('truetype');
     font-weight: 400;
     font-style: normal
 }
@@ -38,7 +38,6 @@
 .et-icon-presentation:before {
     content: "\e00e"
 }
-
 
 .et-icon-edit::before {
     content: "\e01c"
@@ -95,7 +94,6 @@ p {
     background: #c27956
 }
 
-
 a,
 button {
     transition: all .3s ease-in-out;
@@ -103,11 +101,11 @@ button {
 }
 
 #box-container,
+#box-container-contact,
+#box-container-footer,
 #box-container-header,
-#box-container-services,
-#box-container-presentation, 
-#box-container-contact, 
-#box-container-footer {
+#box-container-presentation,
+#box-container-services {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,7 +137,8 @@ button {
 
 .navbar-brand,
 img {
-    width: 25vw;
+    width: 50%;
+    height: 60%;
     height: auto;
     padding: 0
 }
@@ -206,7 +205,6 @@ img {
     background-size: cover;
     position: relative
 }
-
 
 .btn-homepage {
     color: #fff !important;
@@ -353,7 +351,6 @@ button {
     font-size: 18px;
     color: #fff
 }
-
 
 #box-container-portfolio {
     display: flex;
@@ -595,12 +592,11 @@ a[data-lightbox]:hover img {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin: 40px;
-    width: 100%
+    width: 100%;
+    background-color: #f0eeed
 }
 
 .bgc-atomic-tangerine {
-    background-color: #fff;
     width: 100%;
     display: flex;
     justify-content: space-evenly
@@ -656,34 +652,31 @@ a[data-lightbox]:hover img {
     color: #f3976c !important
 }
 
-
 .social-links {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    text-shadow: 0 5px 12px rgba(34, 15, 9, .6)
+    color: #0000 !important
 }
 
 .social-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0;
     width: 100%
 }
 
 .icon-md {
     font-size: clamp(22px, 2vw, 28px);
-    color: #f3976c !important;
+    color: #0000 !important;
     padding: 8px;
-    border-radius: 45%;
-    box-shadow: -1px 3px 10px 2px rgba(243, 151, 108, .27)
+    border-radius: 45%
 }
 
 .social {
     align-self: center;
-    color: #f3976c !important;
+    color: #000 !important;
     padding: 16px;
     width: 55px;
     text-align: center
@@ -708,12 +701,12 @@ a[data-lightbox]:hover img {
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     min-height: 700px;
     -webkit-filter: brightness(.8);
     filter: brightness(.7);
-    -o-object-fit:cover;
-       object-fit:cover;
+    -o-object-fit: cover;
+    object-fit: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -728,8 +721,7 @@ html {
 
 .form-body {
     background-color: #f7ab88;
-    mix-blend-mode: normal;
-    opacity: .58;
+    opacity: .78;
     width: auto;
     height: 100%;
     margin: 24px
@@ -753,7 +745,7 @@ html {
 }
 
 .back {
-    background: #131111 !important;
+    background: #000 !important;
     opacity: .85;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
     border-radius: 14px;
@@ -771,8 +763,8 @@ html {
     font-size: clamp(20px, 2vw, 28px);
     font-weight: 700;
     align-self: center;
-    margin: 0;
-    color: #201f1f !important
+    margin-bottom: 16px;
+    color: #000 !important
 }
 
 #box-container-main {
@@ -785,17 +777,20 @@ html {
 .box-text-form {
     width: 80%;
     text-align: center;
-    margin: 32px 0 16px 0
+    margin: 32px 0 16px 0;
+    opacity: 1
 }
 
 .description-text {
     font-size: clamp(16px, 2vw, 20px) !important;
-    color: #201f1f !important;
-    font-weight: 700
+    color: #000 !important;
+    font-weight: 700;
+    opacity: 1
 }
 
 .box-form {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
@@ -839,6 +834,11 @@ html {
     color: #fff !important
 }
 
+.form-control:focus {
+    color: #fff;
+    transform: scale(1.1)
+}
+
 .text-form {
     color: #fff !important;
     padding-top: 8px;
@@ -868,32 +868,33 @@ textarea {
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
     border-radius: 24px;
     resize: none;
-    color: #fff !important
+    color: #fff !important;
+    padding: 0
 }
 
 #message::-webkit-input-placeholder {
-    color: #fff !important;
-    opacity: .8
+    opacity: 1;
+    padding: 0
 }
 
 #message::-moz-placeholder {
-    color: #fff !important;
-    opacity: .8
+    opacity: 1;
+    padding: 0
 }
 
 #message:-ms-input-placeholder {
-    color: #fff !important;
-    opacity: .8
+    opacity: 1;
+    padding: 0
 }
 
 #message::-ms-input-placeholder {
-    color: #fff !important;
-    opacity: .8
+    opacity: 1;
+    padding: 0
 }
 
 #message::placeholder {
-    color: #fff !important;
-    opacity: .8;
+    opacity: 1;
+    padding: 0
 }
 
 .btn-form {
@@ -922,13 +923,14 @@ textarea {
     justify-content: center;
     align-items: center;
     margin-top: 32px;
-    font-size: 1px;
+    font-size: 1px
 }
 
 .icon-md-f {
     color: #000 !important;
     font-size: clamp(30px, 2.5vw, 40px) !important;
-    margin: 16px
+    margin: 16px;
+    opacity: 1
 }
 
 .icon-md-f:hover {
@@ -1437,7 +1439,7 @@ a:hover {
 
     #message::-webkit-input-placeholder {
         color: #fff !important;
-        opacity: .8;
+        opacity: .8
     }
 
     #message::-moz-placeholder {
