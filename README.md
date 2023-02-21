@@ -20,3 +20,6 @@ Eviter de trop changer le design original du client.
 Soutenance
 Remarques :
 Aurelie a fait une bonne présentation de son travail dans l'ensemble elle a apporté des résolutions satisfaisantes aux différents problèmes qu'elle a detecté dans la version initiale du site.
+
+
+Ecole: [Openclassrooms](https://openclassrooms.com/fr/paths/717-developpeur-web).
