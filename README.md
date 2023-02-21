@@ -1,4 +1,4 @@
-Projet 2 - La Panthère
+Projet 4 - La Panthère
 
 **Livrables:**
 - Amélioration du SEO du site en appliquant tes 10 recommandations à son contenu et à son code source. Le site doit passer le W3C pour HTML et CSS.
